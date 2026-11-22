@@ -1,0 +1,3 @@
+# Use GitHub Path Rulesets for Push Protection
+
+Env-Locker uses explicitly authorized GitHub Apps to manage path-based push rulesets on linked private and internal repositories, separating low-permission sign-in from repository administration; the enforcement App has no `Contents: read` permission and configures no bypass actors. This blocks future pushes that add or change `.env`-style or explicitly configured paths across branches and forks, but does not inspect arbitrary file contents, existing files/history, or local commits; repositories without verified rules remain usable with an explicit unprotected or unknown status.
